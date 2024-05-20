@@ -2,12 +2,6 @@ const webpack = require('webpack')
 const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin')
 
 module.exports = {
-  entry: {
-    index: './index.js',
-    },
-    output: {
-    filename: 'bundle.js',
-    },
   plugins: [
     new WasmPackPlugin({
       crateDirectory: __dirname,
