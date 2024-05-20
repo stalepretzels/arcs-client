@@ -1,4 +1,3 @@
-const path = require('path')
 const webpack = require('webpack')
 const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin')
 
@@ -12,7 +11,7 @@ module.exports = {
   plugins: [
     new WasmPackPlugin({
       crateDirectory: __dirname,
-      extraArgs: "--target web"
+      extraArgs: "--target web --release"
     }),
     // Have this example work in Edge which doesn't ship `TextEncoder` or
     // `TextDecoder` at this time.
